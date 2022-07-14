@@ -89,25 +89,52 @@ time.sleep(0.7)
 #Download Relatorio
 elem = navegador.find_element(By.XPATH, '//*[@id="ctl00_ctl00_C2_LnkAutoReport"]/b').click()
 time.sleep(2.0)
+
 pa.hotkey('Tab')
 pa.hotkey('Tab')
 pa.hotkey('Tab')
 pa.hotkey('Tab')
 pa.hotkey('Enter')
+time.sleep(2.5)
+
+pa.hotkey('ctrl', 'w')
 
 #Entrar nas Solicitações
 navegador.get("https://app6.suasvendas.com/Modulo/YourSales/Financeiro/SVPag/SolicitacoesSVPag.aspx")
 time.sleep(2.5)
 
+#Vencida
+elem = navegador.find_element(By.XPATH, '//*[@id="btnFiltrar"]').click()
+time.sleep(0.7)
+elem = navegador.find_element(By.XPATH, '//*[@id="cbbFiltrar"]/div/a[2]').click()
+time.sleep(0.4)
+elem = navegador.find_element(By.XPATH, '//*[@id="CblFilter_vencida"]/span[2]/label').click()
+time.sleep(0.4)
+elem = navegador.find_element(By.XPATH, '//*[@id="ctl00_ctl00_C2_GridViewFilters_Filvencida_BtnFilter"]').click()
+time.sleep(0.7)
+
+#Status
+elem = navegador.find_element(By.XPATH, '//*[@id="btnFiltrar"]').click()
+time.sleep(0.7)
+elem = navegador.find_element(By.XPATH, '//*[@id="cbbFiltrar"]/div/a[1]').click()
+time.sleep(0.4)
+elem = navegador.find_element(By.XPATH, '//*[@id="CblFilter_lanc_svpag_situacao"]/span[4]/label').click()
+time.sleep(0.4)
+elem = navegador.find_element(By.XPATH, '//*[@id="CblFilter_lanc_svpag_situacao"]/span[6]').click()
+time.sleep(0.7)
+elem = navegador.find_element(By.XPATH, '//*[@id="ctl00_ctl00_C2_GridViewFilters_Fillanc_svpag_situacao_BtnFilter"]').click()
+time.sleep(0.7)
+
 #Download Relatorio
 elem = navegador.find_element(By.XPATH, '//*[@id="ctl00_ctl00_C2_LnkAutoReport"]/b').click()
 time.sleep(2.0)
+
 pa.hotkey('Tab')
 pa.hotkey('Tab')
 pa.hotkey('Tab')
 pa.hotkey('Tab')
 pa.hotkey('Enter')
-time.sleep(20.0)
+
 
 #Mover para pasta SV
 pa.hotkey('win', 'e')
@@ -210,6 +237,10 @@ pa.press('enter')
 pa.typewrite('SV')
 time.sleep(0.5)
 pa.press('delete')
+
+
+
+
 
 
 

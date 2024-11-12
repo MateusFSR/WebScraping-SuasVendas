@@ -1,3 +1,5 @@
+🏪 Projeto de Automação: Extração e Análise de Dados no Sistema Web "Suas Vendas"
+
 A iniciativa envolve uma automação sofisticada para o sistema online "Suas Vendas", uma ferramenta de controle e administração de vendas. Este sistema foi criado para coletar informações cruciais diretamente do site e incorporá-las em planilhas de análise, proporcionando uma perspectiva estratégica das operações e vendas.
 
 Finalidades do Projeto:
